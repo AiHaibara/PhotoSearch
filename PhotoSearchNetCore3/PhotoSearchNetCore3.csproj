@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>MyCore3App</AssemblyName>
+    <Platforms>AnyCPU;x64</Platforms>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="model.onnx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="model.onnx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="1.0.0-preview" />
+    <PackageReference Include="Microsoft.ML.ImageAnalytics" Version="1.0.0-preview" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="0.3.1" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntime.Gpu" Version="0.3.1" />
+    <PackageReference Include="Microsoft.ML.OnnxTransformer" Version="0.12.0-preview" />
+  </ItemGroup>
+</Project>
